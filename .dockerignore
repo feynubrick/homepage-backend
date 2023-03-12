@@ -1,0 +1,12 @@
+venv/
+db.sqlite3
+static/
+docker-compose.yml
+Dockerfile
+.git/
+.gitignore
+.python-version
+LICENSE
+README.md
+*.log
+.env

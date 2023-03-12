@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  django-app:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - app-data:/app
+    networks:
+      - backend
+
+  nginx:
+    image: nginx:1.23.3
+    ports:
+      - "80:80"
+    volumes:
+      - ./deploy/nginx/conf.d:/etc/nginx/conf.d
+      - app-data:/data
+    depends_on:
+      - django-app
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  app-data:
+    driver: local
