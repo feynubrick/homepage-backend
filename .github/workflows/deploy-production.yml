@@ -1,0 +1,13 @@
+name: deploy-production
+on: [push]
+jobs:
+  production-deploy:
+    runs-on: self-hosted
+    if: github.repository == 'main'
+    steps:
+      - name: Update source code
+        run: cd /home/ubuntu/django-wiki && git checkout main && git pull
+      - name: Build Docker images
+        run: cd /home/ubuntu/django-wiki && docker compose build --no-cache
+      - name: Restart Containers
+        run: cd /home/ubuntu/django-wiki && docker compose up --detach --force-recreate --remove-orphans
