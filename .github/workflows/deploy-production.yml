@@ -3,7 +3,7 @@ on: [push]
 jobs:
   production-deploy:
     runs-on: self-hosted
-    if: github.repository == 'main'
+    if: github.ref == "refs/heads/main"
     steps:
       - name: Update source code
         run: cd /home/ubuntu/django-wiki && git checkout main && git pull
