@@ -5,7 +5,7 @@ services:
     env_file:
       - .env
     volumes:
-      - app-data:/app
+      - shared-data:/app/deploy
     networks:
       - backend
 
@@ -15,7 +15,7 @@ services:
       - "80:80"
     volumes:
       - ./deploy/nginx/conf.d:/etc/nginx/conf.d
-      - app-data:/data
+      - shared-data:/data
     depends_on:
       - django-app
     networks:
@@ -26,5 +26,5 @@ networks:
     driver: bridge
 
 volumes:
-  app-data:
+  shared-data:
     driver: local
