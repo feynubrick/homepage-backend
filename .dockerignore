@@ -9,4 +9,3 @@ Dockerfile
 LICENSE
 README.md
 *.log
-.env
