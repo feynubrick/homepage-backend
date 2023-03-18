@@ -5,6 +5,7 @@ services:
     env_file:
       - .env
     volumes:
+      - ./project:/app/project
       - shared-data:/app/deploy
     networks:
       - backend
