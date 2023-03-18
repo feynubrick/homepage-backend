@@ -1,6 +1,10 @@
 #!/bin/bash
+set -a;
+source .env;
+set +a;
 
-if [ "$RUN_ENV" == "prod" ]; then
+
+if [ "$RUN_ENV" == "production" ]; then
   echo "============================"
   echo "<< PRODUCTION ENVIRONMENT >>"
   echo "============================"
