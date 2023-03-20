@@ -1,7 +1,11 @@
 version: "3.9"
 services:
   django-app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - RUN_ENV=$RUN_ENV
     env_file:
       - .env
     volumes:
