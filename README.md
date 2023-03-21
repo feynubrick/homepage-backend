@@ -31,6 +31,20 @@ You can use `.env` file to load the environment variables needed by the followin
 $ set -a; source .env; set +a;
 ```
 
+`local.env` and `production.env` files are prepared for examples.
+If you want to use it as your `.env` file, please do not use it as-is.
+After you modify it as you want, use one of the following commands to make `.env` file from it.
+
+```
+$ cp local.env .env 
+```
+
+OR
+
+```
+$ cp production.env .env
+```
+
 ## Using "venv" to make virtual environment
 
 You can make and use a virtual environment using following command:
