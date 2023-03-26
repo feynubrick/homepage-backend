@@ -1,0 +1,22 @@
+{% load static i18n %}<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>MyHomepage</title>
+    </head>
+    <body>
+        <div>
+            <h1>BASE.HTML</h1>
+        </div>
+
+        <div>
+            {% block content %}
+            {% endblock content %}
+        </div>
+
+        <div>
+            {% block modal %}
+            {% endblock modal %}
+        </div>
+    </body>
+</html>
+
