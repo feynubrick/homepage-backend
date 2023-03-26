@@ -1,6 +1,5 @@
 from django.contrib import admin
 
-from .models import Article, ArticleRevision
+from .models import Article
 
 admin.site.register(Article)
-admin.site.register(ArticleRevision)
