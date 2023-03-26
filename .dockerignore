@@ -1,5 +1,4 @@
 venv/
-static/
 docker-compose.yml
 Dockerfile
 .git/
