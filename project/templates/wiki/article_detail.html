@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% load markdown_extras %}
 
 {% block title %}Article List{% endblock title %}
 
 {% block content %}
     <h2>{{ article.title }}</h2>
     <h5>생성: {{ article.created_at }} / 업데이트: {{ article.updated_at }}</h5>
-    <p>{{ article.body }}</p>
+    <p>{{ article.body | markdown | safe }}</p>
 {% endblock content %}
