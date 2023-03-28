@@ -5,6 +5,7 @@
 
 {% block content %}
     <h2>{{ article.title }}</h2>
-    <h5>생성: {{ article.created_at }} / 업데이트: {{ article.updated_at }}</h5>
+    <h5>생성: {{ article.created_at }}</h5>
+    <h5>업데이트: {{ article.updated_at }}</h5>
     <p>{{ article.body | markdown | safe }}</p>
 {% endblock content %}

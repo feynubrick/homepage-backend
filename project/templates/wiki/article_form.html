@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Add Article{% endblock title %}
+
+{% block content %}
+    <h1>Add Article</h1>
+    <form method="POST" action="{% url 'wiki:article_add' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+{% endblock content %}

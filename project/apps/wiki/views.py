@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 
 from project.apps.wiki.models import Article
 
@@ -10,3 +10,11 @@ class ArticleListView(ListView):
 class ArticleDetailView(DetailView):
     model = Article
 
+
+class ArticleCreateView(CreateView):
+    model = Article
+    fields = [
+        "title",
+        "slug",
+        "body",
+    ]
