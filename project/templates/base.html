@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-{% load static tailwind_tags %}
-{#{% load static i18n %}#}
-
+{% load static i18n %}<!DOCTYPE html>
 <html lang="ko">
     <head>
         <title>MyHomepage</title>
-        {% tailwind_css %}
     </head>
     <body>
-        <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-            <div class="flex">
-                <span class="text-red">개발자 오승윤의 홈페이지</span>
-            </div>
-        </nav>
+        <div>
+            <h1>BASE.HTML</h1>
+        </div>
 
         <div>
             {% block content %}
