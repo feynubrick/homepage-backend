@@ -13,7 +13,7 @@ Please refer to `.env.template` file to make your own `.env` file.
 
 I recommend you to use "pyenv" to match the python version for this repo.
 The version can be automatically set using "pyenv".
-To do that, the matching version should already be installed on you "pyenv".
+To do that, the matching version should already be installed on your "pyenv".
 The version is specified in `.python-version` file in the root directory.
 
 ## Docker and Docker Compose
